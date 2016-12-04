@@ -9,7 +9,7 @@
         <!--Initial view-->
         <scene sceneID="Obp-Q1-72U">
             <objects>
-                <tableViewController title="Initial view" id="ysw-Gp-Zkd" sceneMemberID="viewController">
+                <tableViewController title="Initial view" id="ysw-Gp-Zkd" customClass="TableViewController" customModule="FindMyPub3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="YrE-V3-e0Q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,6 +285,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-no-5gO">
                                                     <rect key="frame" x="276" y="7" width="49" height="30"/>
                                                     <state key="normal" title="Submit"/>
+                                                    <connections>
+                                                        <action selector="submitPub:" destination="ysw-Gp-Zkd" eventType="touchUpInside" id="o6s-lf-vde"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -297,6 +300,14 @@
                             <outlet property="delegate" destination="ysw-Gp-Zkd" id="W8A-lf-rhX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="beerBrand" destination="YQn-N2-in0" id="wLY-xd-A8O"/>
+                        <outlet property="beerPrice" destination="vR9-vS-HLI" id="YNm-Bs-RvF"/>
+                        <outlet property="latitude" destination="aWK-qo-UNa" id="LID-8m-4Tc"/>
+                        <outlet property="longitude" destination="Xjp-QI-Zu7" id="aYr-MK-dVz"/>
+                        <outlet property="openArea" destination="xEN-7A-7OF" id="9yA-vy-JsM"/>
+                        <outlet property="pubName" destination="ceD-cG-GoM" id="Uea-wo-On9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9X1-ec-TjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
